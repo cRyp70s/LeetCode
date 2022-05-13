@@ -5,17 +5,15 @@ class Solution:
         nums_sorted = [nums[i] for i in idx]
         
         for i in range(n):
-            for j in range(i,-1,-1):
-                if i==j:
-                    continue
+            for j in range(i-1,-1,-1):
+                
                 if abs(nums_sorted[i] - nums_sorted[j]) > t:
                     break
                 if abs(idx[i] - idx[j]) <= k:
                     return True
             
-            for j in range(i, n):
-                if i==j:
-                    continue
+            for j in range(i+1, n):
+         
                 if abs(nums_sorted[i] - nums_sorted[j]) > t:
                     break
                 if abs(idx[i] - idx[j]) <= k:
