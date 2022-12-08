@@ -4,7 +4,7 @@ class Solution:
         idx = sorted(range(len(nums)), key=lambda k: nums[k])
         nums_sorted = [nums[i] for i in idx]
         tm = round(target/2)+1
-        for i in range(n):
+        for i in range(n): 
             num1 = nums_sorted[i]
             if num1 > (tm):
                 break
